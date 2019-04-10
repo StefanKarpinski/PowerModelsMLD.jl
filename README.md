@@ -18,7 +18,7 @@ The MLD problem provides a reliable numerical method for solving challenging N-k
 
 The primary entry point of the PowerModelsMLD package is the `PowerModelsMLD.run_ac_mld_uc` function, which provides a scalable heuristic for solving the AC-MLD problem.
 The following example illustrates how to load a network, damage components and solve the AC-MLD problem.
-```
+```julia
 using PowerModels; using PowerModelsMLD; using Ipopt
 network_file = joinpath(dirname(pathof(PowerModels)), "../test/data/matpower/case5.m")
 case = PowerModels.parse_file(network_file)
@@ -35,7 +35,7 @@ The result data indicates that only 700 of the 1000 MWs can be delivered given t
 ## Citing PowerModelsMLD
 
 If you find PowerModelsMLD useful in your work, we kindly request that you cite the following [publication](https://ieeexplore.ieee.org/document/8494809):
-```
+```latex
 @article{8494809, 
   author={Carleton Coffrin and Russel Bent and Byron Tasseff and Kaarthik Sundar and Scott Backhaus}, 
   title={Relaxations of AC Maximal Load Delivery for Severe Contingency Analysis}, 
